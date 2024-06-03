@@ -1,0 +1,36 @@
+.wrapper {
+    display: flex;
+    width: 280px;
+    padding: 8px 0px;
+    max-height: 448px;
+    overflow: auto;
+}
+
+.share-items {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.link-share {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 11px 16px;
+    margin: 0px 3px 0px 4px;
+
+    &:hover {
+        background: rgba(22, 24, 35, 0.03);
+    }
+}
+
+.icon {
+    display: flex;
+}
+
+.title {
+    margin-left: 12px;
+    font-size: 1.7rem;
+    font-weight: 500;
+    line-height: 21px;
+}

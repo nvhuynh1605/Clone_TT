@@ -9,6 +9,7 @@ import Tippy from "@tippyjs/react/headless";
 import Button from '../Button'
 import { Wrapper as PopprerWrapper } from "../Popper";
 import AccountPreview from "../SuggestedAccounts/AccountPreview/AccountPreview";
+import Share from "../Share/Share";
 
 const cx = classNames.bind(styles)
 
@@ -78,10 +79,24 @@ function Post() {
                                 <FontAwesomeIcon className={cx('icon')} icon={faStar} />
                                 <strong className={cx('label')}>46.3K</strong>
                             </button>
-                            <button className={cx('action')}>
-                                <FontAwesomeIcon className={cx('icon')} icon={faShare} />
-                                <strong className={cx('label')}>46.3K</strong>
-                            </button>
+                            <Tippy
+                                interactive
+                                delay={[800, 0]}
+                                offset={[0, 0]}
+                                placement="top-start"
+                                render={(props) => (
+                                    <div tabIndex="-1" {...props}>
+                                        <PopprerWrapper>
+                                            <Share />
+                                        </PopprerWrapper>
+                                    </div>
+                                )}
+                            >
+                                <button className={cx('action')}>
+                                    <FontAwesomeIcon className={cx('icon')} icon={faShare} />
+                                    <strong className={cx('label')}>46.3K</strong>
+                                </button>
+                            </Tippy>
                         </div>
                     </div>
                 </div>
